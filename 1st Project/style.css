@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #229342;
+}
+
+#mtext{
+    position: absolute;
+    top: 50%;             /* top, left, bottom, right tbhi work krenge jb position denge */
+    left: 50%;            /* top, left, transform dete hi centre ho jayga */
+    transform: translate(-50%, -50%);
+    z-index: 9999;         /* agar text chup gya ho piche usko top pe lane ke liye visible hoga */
+}
+
+#mtext h1{
+    user-select: none;      /* user experience khrab nhi hoga koiselect krega text to select nhi hoga */
+    white-space: nowrap;    /* ek hi line me aayga */
+    color: #fff;
+    font-weight: 100;     /* work as a text bold */
+    font-size: 9vw;
+    line-height: 1;
+    font-family: "Sevillana", cursive;
+}
+
+#mtext h3{
+    user-select: none;      
+    white-space: nowrap;  
+    color: #fff;
+    font-weight: 100;     
+    font-size: 4vw;
+    line-height: 1;
+    font-family: "Sevillana", cursive;
+}
+
+#left{
+    overflow: hidden;       /* bhar kuch nhi jayga */
+    position: relative;
+    width: 45%;
+    height: 100%;
+    background-color: red;
+}
+
+#nav{
+    width: 100%;
+    padding: 4px 10px;
+    background-color: burlywood;
+    display:flex;
+    color: #fff;
+    /* gap: 10px; */
+}
+
+#nav a{
+    padding-left: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#nav h3{
+    /* width: 200px; */
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+#center{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: blue;
+    background-image: url(https://images.unsplash.com/photo-1721251326644-05457660fc4e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#right{
+    height: 100%;
+    width: 5%;
+    background-color:blueviolet
+}
+
+#centerimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 50%;
+    background-image:url(https://images.unsplash.com/photo-1616738935736-c0b9211e1f18?q=80&w=1882&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;
+    background-position: center; 
+}
+
+#centerimg #text{
+    display: flex;
+    position: absolute;
+    bottom: -30%;
+    width: 100%;
+    /* height: 70px; */
+    /* background-color: purple; */
+    color: #fff;
+}
+
+#text #parts{
+    width: 50%;
+    /* height: 20px; */
+    /* background-color: aqua; */
+}
+
+#text #para{
+    width: 50%;
+    /* height: 20px; */
+    /* background-color: green; */
+}
+
+#para p{
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+#scroll #line{
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+}
+
+#scroll{
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    transform: rotate(-90deg);
+    transform-origin: 0% 50%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#scroll h4{
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+}
+
+#parts h5{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#center #card{
+    display: flex;
+    position: absolute;
+    right: -5%;
+    bottom: 10%;
+    width: 260px;
+    height: 150px;
+    z-index: 1;
+    background-color: aquamarine;
+}
+
+#cicons{
+    display: flex;
+    flex-direction: column;   /* kisi chiz ko uper niche krna ho */
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+}
+
+#cimage{
+    width: 80%;
+    height: 100%;
+    background-color: yellow;
+    background-image: url(https://images.unsplash.com/photo-1721297013242-7d7f9142c484?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#relem{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+    color: #fff;
+    /* background-color: yellow; */
+}
+
+#relem #rlinks{
+    display: flex;
+    gap: 50px;
+    transform: translateY(-150px) rotate(90deg);
+}
+
+#rlinks a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+}
+
